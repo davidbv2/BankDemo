@@ -1,0 +1,36 @@
+<!-- where our Maven dependencies are stored --> 
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.company.bank</groupId>
+  <artifactId>bank-demo</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>Bank Demo Web App</name>
+
+
+<parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>2.0.1.RELEASE</version>
+</parent>
+
+<!-- Copied this dependency from Maven repo site below; Artifact ID will fetch 
+all web-related JARS & Maven dependencies we need --> 
+<dependencies>
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
+	<dependency>
+		<groupId>com.fasterxml.jackson.core</groupId>
+		<artifactId>jackson-databind</artifactId>
+	</dependency>
+</dependencies>
+
+<!-- Updated JRE library from 1.5 to 1.8 -->
+<properties>
+	<java.version>1.8</java.version>
+</properties>
+
+</project>
+

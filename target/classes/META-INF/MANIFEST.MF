@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: Bank Demo Web App
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: davidvalentineii
+Implementation-Vendor-Id: com.company.bank
+Build-Jdk: 1.8.0_144
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/bank-demo
+Created-By: Maven Integration for Eclipse
+
