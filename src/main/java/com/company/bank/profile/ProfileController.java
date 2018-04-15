@@ -2,9 +2,9 @@ package com.company.bank.profile;
 
 import java.util.List;
 
-import org.apache.catalina.TomcatPrincipal;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -31,9 +31,15 @@ public class ProfileController {
 		return profileService.getProfile(id);
 	}
 	
+	/*	What @RequestBody annotation does is tell Spring MVC that 
+	 * your request body will contain a JSON representation 
+	 * of this Profile instance & then to take the request body & convert it 
+	 * to Profile instance to pass through 
+	 * our ‘addProfile’ Java method 
+	 */
 	@RequestMapping(method=RequestMethod.POST,value="/profiles")
-	public void addProfile (){
-		
+	public void addProfile (@RequestBody Profile profile){
+		profileService.addProfile(profile);
 	}
 	
 	
