@@ -21,8 +21,17 @@ public class ProfileService {
 	
 	public List<Profile> getAllProfiles (){
 		return profiles;
-
-		
+	}
+	
+	public Profile getProfile (int id){
+		/*
+		 * a lambda expression that conveniently allows us to iterate over our list of profiles 
+		 * & match the ID that is passed as an arg. with the 
+		 * first occurrence a profile with the same ID in our list, &
+		 * then get an instance of that specific profile
+		 */
+		return profiles.stream().filter(p -> p.getId()==(id)).findFirst().get();
+	
 	}
 			
 
