@@ -42,6 +42,17 @@ public class ProfileController {
 		profileService.addProfile(profile);
 	}
 	
+	@RequestMapping(method=RequestMethod.PUT,value="/profiles/{id}")
+	public void updateProfile (@RequestBody Profile profile, @PathVariable int id){
+		profileService.updateProfile(id, profile);
+	}
+	
+	@RequestMapping(method=RequestMethod.DELETE,value="/profiles/{id}")
+	public void deleteProfile (@PathVariable int id){
+		profileService.deleteProfile(id);
+	}
+	
+	
 	
 
 }

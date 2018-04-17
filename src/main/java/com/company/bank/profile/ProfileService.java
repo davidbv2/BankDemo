@@ -39,6 +39,20 @@ public class ProfileService {
 	public void addProfile(Profile profile){
 		profiles.add(profile);
 	}
-			
 
+	public void updateProfile(int id, Profile profile) {
+		for (int i = 0; i < profiles.size(); i++){
+			Profile p = profiles.get(i);
+			if (p.getId()==(id)){
+				profiles.set(i, profile);
+		}
+		}
+	}
+/*Wrote lambda expression that removes a profile from our list, at specific id.
+ * Used removeIf option that takes in a predicate/ filter & 
+ * removes all topics where the predicate/filter is true
+*/
+	public void deleteProfile(int id) {
+		profiles.removeIf(p -> p.getId()==(id));
+	}
 }
